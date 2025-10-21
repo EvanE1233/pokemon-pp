@@ -5,9 +5,9 @@ const describe =
       ("should sort Pokemon alphabetically by name",
       () => {
         const unsorted = [
+          { name: "Squirtle" },
           { name: "Bulbasaur" },
           { name: "Charmander" },
-          { name: "Squirtle" },
         ];
 
         const result = sortByName(unsorted);
@@ -25,6 +25,6 @@ const describe =
       const sorted = sortByName(original);
 
       // Original should be unchanged!
-      expect(original[0].name).toBe("Bulbasaur");
+      expect(original[0].name).toBe(/* first item before sort */);
     });
   });
