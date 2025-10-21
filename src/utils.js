@@ -22,5 +22,6 @@ export const sortByName = (pokemonList) => {
   // TODO: Implement this function
   // Hint: Use array sort method
   // Remember: Don't mutate the original array!
+  pokemonList.sort();
   return pokemonList;
 };
