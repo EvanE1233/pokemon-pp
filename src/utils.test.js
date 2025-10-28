@@ -70,7 +70,30 @@ describe("getStrongestPokemon", () => {
 });
 
 describe("sortByName", () => {
-  // TODO: Write test to verify Pokemon are sorted alphabetically
+describe("sortByName", () => {
+  test("should sort Pokemon by name in ascending order", () => {
+    // Arrange
+    const INPUT = [
+      { name: "Squirtle" },
+      { name: "Bulbasaur" },
+      { name: "Pikachu" },
+      { name: "Charmander" },
+    ];
+
+    const EXPECTED_OUTPUT = [
+      { name: "Bulbasaur" },
+      { name: "Charmander" },
+      { name: "Pikachu" },
+      { name: "Squirtle" },
+    ];
+
+    // Act
+    const actualOutput = sortByName(INPUT);
+
+    // TODO: Write test to verify original array is not modified (immutability)});
+  });
+});
+ 
   // TODO: Write test to verify original array is not modified (immutability)
 });
 
