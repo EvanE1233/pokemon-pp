@@ -1,5 +1,6 @@
 export const filterByType = (pokemonList, type) => {
   return pokemonList.filter((pokemon) => pokemon.type === type);
+  
 };
 
 export const getPokemonNames = (pokemonList) => {
@@ -18,12 +19,12 @@ export const getStrongestPokemon = (pokemonList) => {
   return strongest;
 };
 
-export const sortByName = (pokemonList) => {
-  // TODO: Implement this function
+export const sortByName = (pokemonList) =>
+  structuredClone(pokemonList).sort((a, b) => a.name.localeCompare(b.name));
   // Hint: Use array sort method
   // Remember: Don't mutate the original array!
   return pokemonList;
-};
+
 
 export const calculateAverageHP = (pokemonList) => {
   if (pokemonList.length === 0) return 0;
