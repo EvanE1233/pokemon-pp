@@ -9,20 +9,15 @@ export const getPokemonNames = (pokemonList) => {
 
 export const getStrongestPokemon = (pokemonList) => {
   let strongest = pokemonList[0];
-
-  for (let i = 1; i < pokemonList.length; i++) {
-    if (pokemonList[i].attack > strongest.attack) {
-      strongest = pokemonList[i];
-    }
-  }
-
+const sortedAttack = structuredClone(pokemonList).sort((a, b) => b.attack - a.attack);
+const highestAttack = sortedAttack[0].attack;
+return sortedAttack.filter(pokemon => pokemon.attack === highestAttack);
   return strongest;
-};
+}; //I learned how to actually sort the list, unlike last week where I did not know how to sort lists.
 
 export const sortByName = (pokemonList) =>
   structuredClone(pokemonList).sort((a, b) => a.name.localeCompare(b.name));
-  // Hint: Use array sort method
-  // Remember: Don't mutate the original array!
+
   return pokemonList;
 
 

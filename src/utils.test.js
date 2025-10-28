@@ -64,9 +64,23 @@ describe("getPokemonNames", () => {
 
 describe("getStrongestPokemon", () => {
   test("should return Pokemon with highest attack", () => {
+         const INPUT = [
+      { name: "PokemonA", attack: 70 },
+      { name: "PokemonB", attack: 85 },
+      { name: "PokemonC", attack: 85 },
+      { name: "PokemonD", attack: 60 },
+    ];
+   const EXPECTED_OUTPUT = [
+    {name: "PokemonB", attack: 85},
+    {name: "PokemonC", attack: 85} 
+   ];
+
+
+
     const result = getStrongestPokemon(MOCK_DATA);
-    expect(result.name).toBe("Pikachu"); // Pikachu has 55 attack
+    expect(result.name).toBe("PokemonB and PokemonC"); // PokemonB and C have the highest attacks
   });
+  
 });
 
 describe("sortByName", () => {
@@ -79,13 +93,14 @@ describe("sortByName", () => {
       { name: "Pikachu" },
       { name: "Charmander" },
     ];
-
+ // Tests will help you verify that you actually did the thing correctly.
+ // very helpful to put em in for testing
     const EXPECTED_OUTPUT = [
       { name: "Bulbasaur" },
       { name: "Charmander" },
       { name: "Pikachu" },
       { name: "Squirtle" },
-    ];
+    ]; //gota put in the expected output so the test will actually work.
 
     // Act
     const actualOutput = sortByName(INPUT);
