@@ -89,7 +89,7 @@ describe("sortByName", () => {
 
     // Act
     const actualOutput = sortByName(INPUT);
-
+const ORIGINAL_SNAPSHOT = structuredClone(INPUT);
     // TODO: Write test to verify original array is not modified (immutability)});
   });
 });
